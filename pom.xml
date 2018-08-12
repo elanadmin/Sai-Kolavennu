@@ -25,6 +25,18 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <repository>
+        <id>00321bca3728</id>
+        <name>00321bca3728-releases</name>
+        <url>http://54.89.202.211:8120/nexus/content/repositories/LoginApp/</url>
+    </repository>
+    <snapshotRepository>
+        <id>00321bca3728</id>
+        <name>00321bca3728-snapshots</name>
+        <url>http://54.89.202.211:8120/nexus/content/repositories/LoginAppSnap/</url>
+    </snapshotRepository>
+  </distributionManagement>
   <dependencies>
 	<dependency>
 		<groupId>com.fasterxml.jackson.core</groupId>
