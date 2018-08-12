@@ -1,0 +1,15 @@
+version: 0.1
+phases:
+  build:
+    commands:
+      - mvn clean
+      - mvn install
+      - mvn package
+  post_build:
+    commands:
+      - ln -sf target wars
+      - mv target/LoginApp*.war target/loginapp.war
+      - echo "******** Uploading to S3 ********"
+artifacts:
+  files:
+    - wars/loginapp.war
